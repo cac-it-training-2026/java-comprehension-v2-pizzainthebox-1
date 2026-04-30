@@ -1,4 +1,12 @@
 package q01_basic.question04;
+//12 SystemMain05 クラス：main メソッド内に以下の内容を記述する。
+
+//12.1 NonMember クラスオブジェクトを生成し、コンストラクタを使用して name フィールドに値を代入する。
+//AbstMember 型の配列に代入する。
+//12.2 Member クラスオブジェクトを生成し、コンストラクタを使用して id、password、name、age、rank フィールドに値を
+//代入する。AbstMember 型の配列に代入する。
+//12.3 MemberManager クラスの showAllMembers メソッドを呼び出し、各生成オブジェクトのユーザー情報を出力する。
+//12.4 各生成オブジェクトの buyItem メソッドを呼び出し、商品購入メッセージを出力する。
 
 public class SystemMain04 {
 
