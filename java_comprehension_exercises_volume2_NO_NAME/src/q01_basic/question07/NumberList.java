@@ -15,13 +15,24 @@ class NumberList {
 	 */
 	private List<Integer> numbers = new ArrayList<>();
 
+	//	1 NumberList クラス：addFromOneTo メソッド内で、1 から引数で取得した整数までの数値を順番に List 型の numbers フィ
+	//	ールドに追加する。
+	//	2 NumberList クラス：calcSumOfList メソッド内で、numbers フィールドの各要素の合計値を計算し、戻り値として計算結果
+	//	を返す。
+	//	3 NumberList クラス：doubleListEachValue メソッド内で、numbers フィールドの各要素を 2 倍にする。
+	//	4 NumberList クラス：removeIndexOfFirstHalf メソッド内で、numbers フィールドの要素の前半部分を削除する。なお、要素
+	//	数が奇数の場合、中央値は残すこと。
 	/**
-	 * 1から引数までの整数をListに代入する
-	 * 
-	 * @param limit（Listの最終要素）
-	 */
+		 * 1から引数までの整数をListに代入する
+		 * 
+		 * @param limit（Listの最終要素）
+		 */
 	public void addFromOneTo(Integer limit) {
 		//TODO ここから実装する
+		for (int i = 1; i < limit + 1; i++) {
+			numbers.add(i);
+
+		}
 
 	}
 
@@ -33,6 +44,10 @@ class NumberList {
 	public Integer calcSumOfList() {
 		Integer sum = 0;
 		//TODO ここから実装する
+		for (int num : numbers) {
+			sum += num;
+
+		}
 
 		return sum;
 	}
@@ -43,6 +58,10 @@ class NumberList {
 	 */
 	public void doubleListEachValue() {
 		//TODO ここから実装する
+		for (int i = 0; i < numbers.size(); i++) {
+			numbers.set(i, numbers.get(i) * 2);
+		}
+		System.out.println(numbers);
 	}
 
 	/**
@@ -51,7 +70,11 @@ class NumberList {
 	 */
 	public void removeIndexOfFirstHalf() {
 		//TODO ここから実装する
-
+		int removeCount = numbers.size() / 2;
+		for (int i = 0; i < removeCount; i++) {
+			numbers.remove(0); // 常に先頭を消せば、後ろが詰まってくる
+		}
+		System.out.println(numbers);
 	}
 
 	/**

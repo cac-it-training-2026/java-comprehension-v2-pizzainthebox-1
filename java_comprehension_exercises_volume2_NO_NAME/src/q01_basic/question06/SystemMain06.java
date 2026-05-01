@@ -12,24 +12,27 @@ public class SystemMain06 {
 		int rank = 2;
 
 		System.out.println("---CREATE MEMBER DATA---");
-		
-		try {System.out.println("input id>>");
-		 int id=cr.inputNumber();
-		 
-		 
-		 
-		
-			
+
+		try {
+			System.out.println("input id>>");
+			inputId = cr.inputNumber();
+
+			System.out.println("input password>>");
+			//TODO ここから実装する
+			inputPassword = cr.inputString();
+
+			Member member = new Member(inputId, inputPassword, name, age, rank);
+			member.showMember();
+
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println("error!");
+			e.printStackTrace();
+			return;
 		}
-		
-		System.out.println("input password>>"+);
-		//TODO ここから実装する
 
 	}
-
 }
+
 //---CREATE MEMBER DATA---
 //input id>>s
 //error!
