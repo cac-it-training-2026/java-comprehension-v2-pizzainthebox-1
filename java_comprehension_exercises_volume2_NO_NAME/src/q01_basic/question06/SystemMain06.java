@@ -12,8 +12,33 @@ public class SystemMain06 {
 		int rank = 2;
 
 		System.out.println("---CREATE MEMBER DATA---");
-		//TODO ここから実装する
+
+		try {
+			System.out.println("input id>>");
+			inputId = cr.inputNumber();
+
+			System.out.println("input password>>");
+			//TODO ここから実装する
+			inputPassword = cr.inputString();
+
+			Member member = new Member(inputId, inputPassword, name, age, rank);
+			member.showMember();
+
+		} catch (Exception e) {
+			System.out.println("error!");
+			e.printStackTrace();
+			return;
+		}
 
 	}
-
 }
+
+//---CREATE MEMBER DATA---
+//input id>>s
+//error!
+//java.lang.NumberFormatException: For input string: "s"
+//at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+//at java.base/java.lang.Integer.parseInt(Integer.java:668)
+//at java.base/java.lang.Integer.parseInt(Integer.java:786)
+//at q01_basic.question06.ConsoleReader.inputNumber(ConsoleReader.java:34)
+//at q01_basic.question06.SystemMain06.main(SystemMain06.java:45
